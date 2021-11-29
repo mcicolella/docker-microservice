@@ -3,13 +3,13 @@ name: Build and Publish Docker
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: doker-microservice
+      IMAGE_NAME: docker-microservice
     steps:
       - name: checkout
         uses: actions/checkout@v2
