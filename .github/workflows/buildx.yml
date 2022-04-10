@@ -7,7 +7,7 @@ on:
     branches: main
 
 permissions:
-  actions: write
+  packages: write
 
 jobs:
   buildx:
