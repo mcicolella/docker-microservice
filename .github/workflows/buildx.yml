@@ -9,10 +9,7 @@ on:
 jobs:
   buildx:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    
+     
     steps:
       # Get the repositery's code
       - name: Checkout
@@ -44,7 +41,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_TOKEN }}
             
       # Reusing the cache, push the images
       - name: Run Buildx
