@@ -9,6 +9,10 @@ on:
 jobs:
   buildx:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
     steps:
       # Get the repositery's code
       - name: Checkout
